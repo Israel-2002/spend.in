@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2.125rem;
+  cursor: pointer;
+  color: $color-white;
+  border-radius: 30px;
+  font-weight: 500;
+
+  &__purple {
+    background-color: $color-purple;
+  }
+
+  &__dark {
+    background-color: $color-dark-500;
+  }
+
+  &__red {
+    background-color: rgb(243, 162, 162);
+    color: #f3f5f7;
+  }
+}

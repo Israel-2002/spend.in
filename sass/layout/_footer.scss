@@ -1,0 +1,108 @@
+.footer {
+  text-align: left;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(laptop) {
+      flex-direction: row;
+      gap: 6.875rem;
+      margin-bottom: 4rem;
+    }
+
+    @include breakpoint(desktop) {
+      gap: 13.75rem;
+    }
+  }
+
+  &__logo {
+    width: 6.6875rem;
+    margin-bottom: 0.75rem;
+
+    @include breakpoint(laptop) {
+      width: 7.2rem;
+    }
+
+    @include breakpoint(desktop) {
+      width: 9rem;
+    }
+
+    &-description {
+      font-size: 1.125rem;
+      color: $color-purple-400;
+      max-width: 220px;
+
+      @media(min-width: 480px) {
+        max-width: 280px;
+      }
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5625rem;
+    row-gap: 2rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+    }
+
+    @include breakpoint(laptop) {
+      gap: 4.5rem;
+    }
+
+    &-title {
+      font-size: clamp(1.125rem, 1.0893rem + 0.1786vw, 1.25rem);
+      color: $color-dark-500;
+      margin-bottom: 2rem;
+    }
+
+    &-links {
+      display: grid;
+      gap: 1.5rem;
+
+      & p {
+        color: $color-purple-400;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #cebefe;
+
+    @include breakpoint(laptop) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      @include breakpoint(tablet) {
+        flex-direction: row;
+      }
+
+      & p {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: $color-dark-500;
+      }
+    }
+
+    &-right {
+      font-weight: 500;
+      color: $color-purple-400;
+    }
+  }
+}

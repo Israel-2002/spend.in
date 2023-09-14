@@ -1,0 +1,46 @@
+.benefits {
+  &__contents {
+    display: grid;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &-details {
+      display: grid;
+      gap: 1.125rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 0.75rem;
+    text-align: left;
+    max-width: 450px;
+    margin-inline: auto;
+
+    @include breakpoint(tablet) {
+      gap: 1.4rem;
+    }
+
+    @include breakpoint(laptop) {
+      gap: 2rem;
+    }
+
+    &-info {
+      &-title {
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      &-description {
+        font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
+      }
+    }
+
+    &-svg {
+      flex-shrink: 0;
+    }
+  }
+}

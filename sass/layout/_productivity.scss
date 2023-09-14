@@ -1,0 +1,64 @@
+.productivity {
+  &__title {
+    margin-bottom: 2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__info {
+    display: grid;
+    gap: 4rem;
+
+    @include breakpoint(tablet) {
+      gap: 8rem;
+    }
+
+    @include breakpoint(laptop) {
+      gap: 12rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &--2 {
+      flex-direction: column-reverse;
+    }
+
+    &-details {
+      text-align: left;
+      max-width: 450px;
+      margin-inline: auto;
+    }
+  }
+
+  &__btn {
+    font-size: clamp(0.75875rem, 0.6898rem + 0.3446vw, 1rem);
+    margin-bottom: 1.5rem;
+  }
+
+  &__benefits {
+    display: grid;
+    gap: 2rem;
+
+    &-title {
+      font-weight: 700;
+    }
+
+    &-description {
+      font-weight: 500;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.cta {
+  background-color: $color-dark;
+  text-align: left;
+  padding-block: 7.5rem 0;
+
+  &__container {
+    max-width: 1440px;
+
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-left: 7.5%;
+    }
+
+    @include breakpoint(laptop) {
+      margin-left: 10%;
+    }
+
+    @include breakpoint(desktop) {
+      margin-inline: auto;
+    }
+  }
+
+  &__info {
+    width: 85%;
+    margin-inline: auto;
+  }
+
+  &__title,
+  &__lead {
+    margin-inline: 0;
+    max-width: 400px;
+  }
+
+  &__btn {
+    width: 100%;
+    margin-bottom: 4.5rem;
+    max-width: 300px;
+
+    @include breakpoint(tablet) {
+      width: fit-content;
+    }
+  }
+
+  &__image {
+    width: 95%;
+    margin-left: auto;
+
+
+    @include breakpoint(tablet) {
+        width: 100%;
+    }
+
+    & img {
+      display: block;
+    }
+  }
+}

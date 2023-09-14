@@ -1,0 +1,96 @@
+.header {
+  background-color: $color-dark;
+  color: $color-white;
+  padding-block: 9rem 4rem;
+  position: relative;
+
+  @media (min-width: 540px) {
+    text-align: center;
+  }
+
+  @include breakpoint(desktop) {
+    padding-block: 12.5rem 7rem;
+  }
+
+  &__decoration {
+    width: 160px;
+    position: absolute;
+
+    @media (min-width: 360px) {
+      width: 180px;
+    }
+
+    @include breakpoint(tablet) {
+      width: 300px;
+    }
+
+    @include breakpoint(laptop) {
+      width: 400px;
+    }
+
+    &-1 {
+      top: 0;
+      right: 0;
+    }
+
+    &-2 {
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: clamp(2.25rem, 1.6071rem + 3.2143vw, 4.5rem);
+    font-weight: 700;
+    max-width: 800px;
+    margin-inline: auto;
+    margin-bottom: 0.75rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__description {
+    font-size: clamp(0.875rem, 0.6964rem + 0.8929vw, 1.5rem);
+    font-weight: 400;
+    color: $color-purple-300;
+    max-width: 650px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__btns {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+    max-width: 400px;
+
+    @media (min-width: 540px) {
+      margin-inline: auto;
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__btn-dynamic {
+    background-color: transparent;
+
+    @include breakpoint(tablet) {
+      background-color: $color-dark-500;
+    }
+  }
+
+  &__image {
+    border-radius: 11.79px;
+    overflow: hidden;
+  }
+}

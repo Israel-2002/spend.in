@@ -1,0 +1,176 @@
+.pricing {
+  &__cards {
+    display: grid;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint(laptop) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__type {
+    position: relative;
+    width: fit-content;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    & span {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & p {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+    }
+
+    &-switch {
+      position: relative;
+      width: 4.375rem;
+      height: 2.25rem;
+      background-color: $color-purple;
+      border-radius: 30px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50%;
+        background-color: $color-white;
+        top: 4px;
+        right: 4px;
+      }
+    }
+
+    &-save {
+      background-color: #e7defe;
+      color: $color-dark;
+      padding: 0.25rem 0.75rem;
+      border-radius: 30px;
+    }
+
+    &-arrow {
+      position: absolute;
+      right: -15px;
+      bottom: -15px;
+    }
+  }
+
+  &__card {
+    background-color: $color-white-100;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: left;
+    max-width: 380px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(tablet) {
+      padding: 2rem;
+    }
+
+    &--popular {
+      @include breakpoint(tablet) {
+        position: relative;
+
+        &::before {
+          content: "Popular";
+          position: absolute;
+          padding: 0.25rem 1rem;
+          background-color: $color-dark;
+          color: $color-white;
+          border-radius: 30px;
+          right: 2rem;
+          top: 2rem;
+        }
+      }
+    }
+
+    &-title {
+      font-size: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+
+      & img {
+        flex-shrink: 0;
+      }
+
+      @include breakpoint(laptop) {
+        gap: 0.75rem;
+      }
+    }
+
+    &-description {
+      font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
+      margin-bottom: 1.5rem;
+      color: $color-purple-400;
+
+      @include breakpoint(laptop) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-price {
+      font-size: clamp(2rem, 1.8571rem + 0.7143vw, 2.5rem);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.625rem;
+
+      & span {
+        font-size: clamp(0.875rem, 0.8036rem + 0.3571vw, 1.125rem);
+        font-weight: 500;
+        color: $color-purple-400;
+      }
+    }
+
+    &-plan-description {
+      font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
+      color: $color-dark-500;
+      margin-bottom: 1.5rem;
+    }
+
+    &-benefits {
+      display: grid;
+      gap: 1.125rem;
+      margin-bottom: 2.5rem;
+
+      @include breakpoint(laptop) {
+        gap: 1.5rem;
+      }
+
+      & p {
+        font-size: clamp(0.875rem, 0.8036rem + 0.3571vw, 1.125rem);
+        font-weight: 500;
+        color: $color-dark;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+    }
+
+    &-btn {
+      font-size: clamp(0.830625rem, 0.7822rem + 0.242vw, 1rem);
+      font-weight: 600;
+      width: 100%;
+      text-align: center;
+      margin-top: auto;
+    }
+  }
+}
