@@ -5,17 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "sass sass/main.scss css/style.css -w",
-    "start": "parcel html/index.html",
-    "build": "parcel html/index.html"
+    "compile": "sass sass/main.scss css/style.css -w"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.64.2"
-  },
-  "devDependencies": {
-    "parcel": "^2.9.3"
   }
 }
